@@ -1,0 +1,105 @@
+body {
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    color: #123524;
+}
+
+.card {
+    border: none;
+    background: white;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-weight: 700;
+    color: #14213d;
+    margin-bottom: 25px;
+}
+
+.prayer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.prayer-item:last-child {
+    border-bottom: none;
+}
+
+.prayer-item span:last-child {
+    font-weight: 600;
+    color: #222;
+}
+
+.btn-success {
+    background: #198754;
+    border-color: #198754;
+}
+
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+#loading {
+    color: #198754;
+    font-weight: 600;
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+
+.table {
+    white-space: nowrap;
+}
+
+
+.table th {
+    background: #198754;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.table td {
+    text-align: center;
+    padding: 12px;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+@media(max-width:768px) {
+
+    .prayer-item {
+
+        font-size: 16px;
+
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+}

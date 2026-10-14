@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+            <div class="container">
+
+                <a class="navbar-brand fw-bold fs-4" href="#">
+                    🕌 Prayer Times
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Calendar
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Qibla
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <span>
+                        📍 Baku, Azerbaijan
+                    </span>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="container mt-4">
+
+        <div class="text-center mb-4">
+
+            <button id="dailyBtn" class="btn btn-success">
+                Daily
+            </button>
+
+            <button id="monthlyBtn" class="btn btn-outline-success">
+                Monthly
+            </button>
+
+        </div>
+
+        <section id="dailyView">
+
+            <div class="card shadow rounded-4 p-4">
+
+                <h2>
+                    Select Date
+                </h2>
+
+                <div class="row g-3">
+
+                    <div class="col-md-8">
+
+                        <input type="date" id="dateInput" class="form-control">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <button id="searchBtn" class="btn btn-success w-100">
+
+                            Search
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="loading" class="text-center mt-3" style="display:none;">
+
+
+                <div class="spinner-border text-success"></div>
+
+
+                <p>
+                    Loading...
+                </p>
+
+
+            </div>
+
+
+            <div class="card shadow rounded-4 p-4 mt-4">
+
+                <h2>
+                    Prayer Times
+                </h2>
+
+                <div class="prayer-item">
+
+                    <span>
+                        🌅 Fajr
+                    </span>
+
+                    <span id="fajr">
+                        --:--
+                    </span>
+
+                </div>
+
+                <div class="prayer-item">
+                    <span>
+                        ☀️ Sunrise
+                    </span>
+                    <span id="sunrise">
+                        --:--
+                    </span>
+                </div>
+
+                <div class="prayer-item">
+                    <span>
+                        🌞 Dhuhr
+                    </span>
+                    <span id="dhuhr">
+                        --:--
+                    </span>
+                </div>
+
+                <div class="prayer-item">
+                    <span>
+                        🌤️ Asr
+                    </span>
+                    <span id="asr">
+                        --:--
+                    </span>
+                </div>
+
+                <div class="prayer-item">
+                    <span>
+                        🌇 Maghrib
+                    </span>
+                    <span id="maghrib">
+                        --:--
+                    </span>
+                </div>
+
+                <div class="prayer-item">
+                    <span>
+                        🌙 Isha
+                    </span>
+                    <span id="isha">
+                        --:--
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="monthlyView" style="display:none;">
+
+            <div class="card shadow rounded-4 p-4">
+
+                <h2>
+                    Monthly Prayer Times
+                </h2>
+
+                <div class="row mb-3">
+
+                    <div class="col-md-8">
+
+                        <input type="month" id="monthInput" class="form-control">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <button id="monthSearchBtn" class="btn btn-success w-100">
+
+                            Search Month
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <table class="table table-bordered text-center">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+                            <th>Fajr</th>
+                            <th>Sunrise</th>
+                            <th>Dhuhr</th>
+                            <th>Asr</th>
+                            <th>Maghrib</th>
+                            <th>Isha</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="monthTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
